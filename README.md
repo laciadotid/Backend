@@ -1,6 +1,9 @@
 # Website Blog
 Febriansyah 06.2020.1.07285
+
 Hafizh
+
+Riva
 
 ## Rekomendasi sistem
 
@@ -57,12 +60,11 @@ php artisan key:generate
 php artisan serve
 ```
 
-buka <http://127.0.0.1:8000/>
+beranda : <http://127.0.0.1:8000/>
 
+login : <http://127.0.0.1:8000/login>
 
-<http://127.0.0.1:8000/login>
-
-<http://127.0.0.1:8000/register>
+register : <http://127.0.0.1:8000/register>
 
 ## Login
 
