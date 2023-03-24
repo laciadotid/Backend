@@ -5,7 +5,9 @@ Hafizh
 ## Rekomendasi sistem
 
 PHP 8.1+
+
 Node.js 18
+
 MariaDB 10.4+
 
 sudah terinstall composer
@@ -59,8 +61,11 @@ buka <http://127.0.0.1:8000/>
 
 
 <http://127.0.0.1:8000/login>
+
 <http://127.0.0.1:8000/register>
 
 ## Login
+
 Email : admin@sekai.id
+
 Password : 177013
