@@ -2,10 +2,11 @@
 Febriansyah 06.2020.1.07285
 Hafizh
 
-## Persyaratan sistem
+## Rekomendasi sistem
 
-PHP minimal 8.0
-Node.js minimal 16.10
+PHP 8.1+
+Node.js 18
+MariaDB 10.4+
 
 sudah terinstall composer
 <https://getcomposer.org/>
@@ -59,3 +60,7 @@ buka <http://127.0.0.1:8000/>
 
 <http://127.0.0.1:8000/login>
 <http://127.0.0.1:8000/register>
+
+## Login
+Email : admin@sekai.id
+Password : 177013
