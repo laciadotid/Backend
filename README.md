@@ -49,11 +49,11 @@ yarn build
 ```
 
 ```bash
-php artisan migrate --seed
+php artisan key:generate
 ```
 
 ```bash
-php artisan key:generate
+php artisan migrate --seed
 ```
 
 ```bash
