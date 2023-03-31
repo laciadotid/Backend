@@ -25,4 +25,12 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/post', function () {
+        return view('post');
+    })->name('post');
+
+    Route::get('/payment', function () {
+        return view('payment');
+    })->name('payment');
 });
