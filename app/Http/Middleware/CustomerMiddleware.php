@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Cache;
 
  class CustomerMiddleware
  {
@@ -38,6 +39,7 @@ use Illuminate\Contracts\Auth\Guard;
          if ($this->auth->getUser()->user_category !== "penulis") {
              abort(403, 'Unauthorized action.');
          }
+
          return $next($request);
      }
  }

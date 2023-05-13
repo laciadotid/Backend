@@ -23,9 +23,14 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                if($guard === 'penulis')
+                    return redirect('penulis/dashboard');
+                }
+                else if($guard === 'admin'){
+                    return redirect('admin/dashboard');
+                }
             }
-        }
+
 
         return $next($request);
     }
