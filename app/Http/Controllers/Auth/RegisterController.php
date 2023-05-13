@@ -38,7 +38,7 @@ class RegisterController extends Controller
         }
         elseif (auth()->user()->user_category == 'penulis')
         {
-            return '/customer/dashboard';
+            return '/penulis/dashboard';
         }
         return '/';
     }
