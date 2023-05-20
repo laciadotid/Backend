@@ -12,52 +12,55 @@
 
                         {{-- title --}}
                         <div class="form-group">
-                            <label for="exampleInputUsername1">title</label>
-                            <input type="text" class="form-control" id="exampleInputUsername1" name="title" placeholder="Nama pelayanan">
+                            <label for="exampleInputUsername1">Title</label>
+                            <input type="text" class="form-control" id="exampleInputUsername1" name="title" placeholder="Title">
                         </div>
 
                         {{-- slug --}}
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="exampleInputUsername1">slug</label>
                             <input type="text" class="form-control" id="exampleInputUsername1" name="slug" placeholder="Nama pelayanan">
-                        </div>
+                        </div> --}}
 
                         {{-- metadescription --}}
                         <div class="form-group">
-                            <label for="exampleInputUsername1">metadescription</label>
-                            <input type="text" class="form-control" id="exampleInputUsername1" name="metaDescription" placeholder="Nama pelayanan">
+                            <label for="exampleInputUsername1">Meta Description</label>
+                            <textarea  class="form-control" id="exampleInputUsername1" rows="4" name="metaDescription" placeholder="Meta Description"> </textarea>
                         </div>
 
                         {{-- featureimage --}}
                         <div class="form-group">
-                            <label for="exampleInputUsername1">featureimage</label>
-                            <input type="file" class="form-control" id="exampleInputUsername1" name="featuredImage" placeholder="Nama pelayanan">
+                            <label for="exampleInputUsername1">Featured Image</label>
+                            <input type="file" class="form-control" id="exampleInputUsername1" name="featuredImage" placeholder="Featured Image">
                         </div>
 
                         {{-- date --}}
                         <div class="form-group">
-                            <label for="exampleInputUsername1">date</label>
-                            <input type="date" class="form-control" id="exampleInputUsername1" name="date" placeholder="Nama pelayanan">
+                            <label for="exampleInputUsername1">Date</label>
+                            <input type="date" class="form-control" id="exampleInputUsername1" name="date" placeholder="Date">
                         </div>
 
-                        {{-- content --}}
-                        <div class="form-group">
-                            <label for="exampleInputUsername1">content</label>
-                            <input type="text" class="form-control" id="exampleInputUsername1" name="content" placeholder="Nama pelayanan">
-                        </div>
 
-                         {{-- post_author otomatis --}}
-
-                        {{-- post_category --}}
-                        <div class="form-group">
-                            <label for="exampleInputUsername1">post_category</label>
+                          {{-- post_category --}}
+                          <div class="form-group">
+                            <label for="exampleInputUsername1">category</label>
                             <select class="form-control js-example-basic-single" id="category" name="post_category" style="height: 50px !important">
-                                <option selected disabled>Pilih Kategory</option>
+                                <option selected disabled>pilih category</option>
                                 @foreach($category as $cty)
                                     <option value="{{ $cty->id }}">{{ $cty->title }}</option>
                                 @endforeach
                             </select>
                         </div>
+
+                        {{-- content --}}
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">description content</label>
+                            <textarea class="form-control" id="exampleInputUsername1" rows="8" name="content" placeholder="description content"> </textarea>
+                        </div>
+
+                         {{-- post_author otomatis --}}
+
+
 
 
 

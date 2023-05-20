@@ -1,11 +1,16 @@
 "A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
-scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+scalar DateTime
+    @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
 
 "Indicates what fields are available at the top level of a query operation."
 type Query {
-    post: [Post] @all
+    post(where: PostWhereInput): [Post]
+        @field(resolver: "App\\GraphQL\\Queries\\PostResolver")
 }
 
+input PostWhereInput {
+    slug: String
+}
 
 type User {
     id: ID!
@@ -17,7 +22,6 @@ type Category {
     title: String!
 }
 
-
 type Post {
     id: ID!
     title: String!
@@ -25,11 +29,7 @@ type Post {
     metaDescription: String!
     featuredImage: String!
     date: String!
+    content: String!
     user: User @belongsTo
     category: Category @belongsTo
 }
-
-
-
-
-

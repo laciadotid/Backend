@@ -31,6 +31,16 @@ class CategorySeeder extends Seeder
                 'description' => 'description 2',
                 'created_at' => now()
             ],
+            [
+                'title' => 'war',
+                'description' => 'description 3',
+                'created_at' => now()
+            ],
+            [
+                'title' => 'romantic',
+                'description' => 'description 4',
+                'created_at' => now()
+            ],
 
             ]);
 

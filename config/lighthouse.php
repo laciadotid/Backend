@@ -1,4 +1,6 @@
 <?php
+// use App\GraphQL\Queries\PostResolver;
+
 
 return [
     /*
@@ -11,6 +13,26 @@ return [
     | registration and take full control.
     |
     */
+
+    // 'default' => [
+    //     'query' => [
+    //         // ...
+    //         'post' => PostResolver::class,
+    //         'usePaginationArgs' => true,
+    //     ],
+    //     'mutation' => [
+    //         // ...
+    //     ],
+    //     'middleware' => [
+    //         // ...
+    //     ],
+    //     'method' => [
+    //         // ...
+    //     ],
+    // ],
+
+
+
 
     'route' => [
         /*

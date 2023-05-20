@@ -46,7 +46,7 @@ class BeritaController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'title' => 'required|max:255',
-            'slug' => 'required|max:255',
+            // 'slug' => 'required|max:255',
             'metaDescription' => 'required|max:255',
             'featuredImage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'date' => 'required|max:255',
@@ -57,7 +57,7 @@ class BeritaController extends Controller
 
         $berita = new Post();
         $berita->title = $request->title;
-        $berita->slug = $request->slug;
+        // $berita->slug = $request->slug;
         $berita->metaDescription = $request->metaDescription;
         $berita->date = $request->date;
         $berita->content = $request->content;
