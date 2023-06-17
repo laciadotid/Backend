@@ -18,8 +18,9 @@ class DaftarBeritaController extends Controller
      */
     public function index()
     {
-        $daftarberita = Post::all();
-        return view('daftarberita.index', compact('daftarberita'));
+        $daftarberitaview = Post::all();
+        $daftarberita = Post::where('status', 0)->get();
+        return view('daftarberita.index', compact('daftarberita','daftarberitaview'));
     }
 
     // pembayaran
@@ -45,6 +46,17 @@ class DaftarBeritaController extends Controller
         $pembayaran->payment_post = $request->payment_post;
         $pembayaran->payment_admin = Auth::user()->id;
         $pembayaran->save();
+
+        if($pembayaran->save()){
+            $post = Post::find($id); // Replace $id with the appropriate ID of the associated post
+
+            if ($post) {
+                $post->status = 1;
+                $post->save();
+            }
+        
+        }
+
         return redirect()->route('daftarberita.index');
     }
 

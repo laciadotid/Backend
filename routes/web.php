@@ -37,6 +37,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('daftarberita', [DaftarBeritaController::class, 'index'])->name('daftarberita.index');
     Route::get('daftarberita/{id}/pembayaran', [DaftarBeritaController::class, 'pembayaran'])->name('daftarberita.pembayaran');
     Route::put('daftarberita/{id}', [DaftarBeritaController::class, 'bayar'])->name('daftarberita.bayar');
+    Route::get('admin/history', [BeritaController::class, 'historyadmin'])->name('history.historyadmin');
     // Route::resource('berita', BeritaController::class);
 
     // Route::get('services/createkategori', [ServiceController::class,'createkategori'])->name('services.createkategori');
@@ -51,6 +52,10 @@ Route::middleware(['auth', 'penulis'])->group(function () {
     Route::post('berita', [BeritaController::class, 'store'])->name('berita.store');
     Route::get('berita/{id}/edit', [BeritaController::class, 'edit'])->name('berita.edit');
     Route::put('berita/{id}', [BeritaController::class, 'update'])->name('berita.update');
+    Route::get('history/history', [BeritaController::class, 'history'])->name('history.history');
+    // Route::delete('berita/{id}', [BeritaController::class, 'destroy'])->name('berita.destroy');
+    // Route::delete('/berita/{id}', 'BeritaController@destroy')->name('berita.destroy');
+
 
     // Route::get('reservations/history', [ReservationController::class, 'history'])->name('reservations.history');
     // Route::get('reservations/{id}/edit', [ReservationController::class, 'edit'])->name('reservations.edit');

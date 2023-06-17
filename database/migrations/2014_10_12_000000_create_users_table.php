@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('norekening');
             // value : admin, penulis
             // $table->string('user_category');
             $table->rememberToken();

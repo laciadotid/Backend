@@ -16,38 +16,28 @@
         <div class="col-md-7 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <p class="card-title mb-0">Saldo Anda Terbaru</p>
+                    <p class="card-title mb-0">Postingan Anda Terbaru</p>
                     <div class="table-responsive">
-                        {{-- <table class="table table-striped table-borderless">
+                         <table class="table table-striped table-borderless">
                             <thead>
                                 <tr>
-                                    <th>Nama Hewan</th>
-                                    <th>Jenis Hewan</th>
-                                    <th>Keluhan/Layanan</th>
-                                    <th>Status</th>
+                                    <th>judul</th>
+                                    <th>deskripsi</th>
+                                    <!-- <th>gambar</th> -->
+                                    <!-- <th>Status</th> -->
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($reservations as $reservation)
+                                @foreach($postingan as $ptn)
                                     <tr>
-                                        <td>{{ $reservation->pet_name }}</td>
-                                        <td>{{ $reservation->pet_type }}</td>
-                                        <td>{{ $reservation->service->name }}</td>
-                                        <td class="font-weight-medium">
-                                            @if ($reservation->status == 'Pending')
-                                                <label class="badge badge-warning">{{ $reservation->status }}</label>
-                                            @elseif ($reservation->status == 'Accepted')
-                                                <label class="badge badge-primary">{{ $reservation->status }}</label>
-                                            @elseif ($reservation->status == 'Rejected')
-                                                <label class="badge badge-danger">{{ $reservation->status }}</label>
-                                            @else
-                                                <label class="badge badge-success">{{ $reservation->status }}</label>
-                                            @endif
-                                        </td>
+                                        <td>{{ $ptn->title }}</td>
+                                        <td>{{ $ptn->metaDescription }}</td>
+                                       
+                                      
                                     </tr>
                                 @endforeach
                             </tbody>
-                        </table> --}}
+                        </table> 
                     </div>
                 </div>
             </div>
@@ -70,23 +60,23 @@
                     </div>
                 </div>
 
-                {{-- <div class="col-md-12 mb-4 stretch-card transparent">
+                <!-- {{-- <div class="col-md-12 mb-4 stretch-card transparent">
                     <div class="card card-dark-blue">
                         <div class="card-body">
                             <p class="mb-4">Total Reservasi Anda</p>
                             <p class="fs-30 mb-2">{{ $all }}</p>
                         </div>
                     </div>
-                </div> --}}
+                </div> --}} -->
 
-                {{-- <div class="col-md-12 mb-4 stretch-card transparent">
+                <!-- {{-- <div class="col-md-12 mb-4 stretch-card transparent">
                     <div class="card card-light-blue">
                         <div class="card-body">
                             <p class="mb-4">Total Reservasi Complete</p>
                             <p class="fs-30 mb-2">{{ $complete }}</p>
                         </div>
                     </div>
-                </div> --}}
+                </div> --}} -->
 
             </div>
         </div>

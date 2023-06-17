@@ -26,6 +26,7 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@sekai.id',
             'password' => Hash::make('177013'),
+            'norekening' => 7676,
             'user_category' => 'admin',
             'created_at' => now()
         ],
@@ -33,6 +34,7 @@ class UserSeeder extends Seeder
             'name' => 'febriansyah',
             'email' => 'febriansyah@gmail.com',
             'password' => Hash::make('12345'),
+            'norekening' => 4545,
             'user_category' => 'penulis',
             'created_at' => now()
         ],

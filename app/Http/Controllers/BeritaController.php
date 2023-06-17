@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Payment;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
@@ -61,6 +63,7 @@ class BeritaController extends Controller
         $berita->metaDescription = $request->metaDescription;
         $berita->date = $request->date;
         $berita->content = $request->content;
+        $berita->status=0;
         $berita->post_category = $request->post_category;
         $berita->post_author = Auth::user()->id;
 
@@ -150,6 +153,30 @@ class BeritaController extends Controller
      */
     public function destroy($id)
     {
-        //
+    
+    }
+
+    public function history()
+    {
+        // $history = Payment::all();
+
+        $history = Payment::join('post', 'payment.payment_post', '=', 'post.id')->where('post.post_author', Auth::user()->id)->get();
+
+        return view('history.history', compact('history'));
+        // return view('berita.create');
+    }
+
+
+    public function historyadmin()
+    {
+        // $history = Payment::all();
+
+        $historyadmin = Payment::join('post', 'payment.payment_post', '=', 'post.id')
+        ->join('users', 'post.post_author', '=', 'users.id')
+        ->select('users.*','post.*','payment.*')
+        ->get();
+
+        return view('history.historyadmin', compact('historyadmin'));
+        // return view('berita.create');
     }
 }

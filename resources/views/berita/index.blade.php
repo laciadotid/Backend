@@ -19,6 +19,7 @@
                                     <th>title</th>
                                     <th>slug</th>
                                     <th>featuredImage</th>
+                                    <th>Date</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -28,17 +29,15 @@
                                         <td>{{ ++$key }}</td>
                                         <td>{{ $brt->title }}</td>
                                         <td>{{ $brt->slug}}</td>
+                                       
                                         <td>
                                             <img src="{{ asset('fotoberita/'.$brt->featuredImage) }}" alt="">
                                         </td>
+                                        <td>{{ $brt->created_at}}</td>
                                         <td>
                                             <a href="{{ route('berita.edit', $brt->id) }}">Edit</a> |
 
-                                            {{-- <form action="{{ route('kategori.destroy', $cty->id) }}" method="post" class="d-inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                <a href="#" onclick="this.closest('form').submit(); return false;">Delete</a>
-                                            </form> --}}
+                                          
                                         </td>
                                     </tr>
                                 @endforeach

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('featuredImage');
             $table->string('date');
             $table->longtext('content');
+            $table->integer('status');
             $table->unsignedBigInteger('post_author');
             $table->foreign('post_author')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('post_category');
