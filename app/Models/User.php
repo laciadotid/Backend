@@ -22,6 +22,7 @@ class User extends Authenticatable
         'user_category',
         'email',
         'password',
+        'norekening',
     ];
 
     /**

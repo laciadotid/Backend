@@ -65,6 +65,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'norekening' => ['required', 'integer', 'between:0,18446744073709551615'],
         ]);
     }
 
@@ -80,6 +81,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'norekening' => $data['norekening'],
             'user_category' => 'penulis',
         ]);
     }

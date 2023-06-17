@@ -45,6 +45,15 @@
                             <div class="form-group">
                                 <input id="password-confirm" type="password" class="form-control form-control-lg" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password">
                             </div>
+                            <div class="form-group">
+                                <input id="norekening" type="text" class="form-control form-control-lg @error('norekening') is-invalid @enderror" name="norekening" placeholder="no rekening" value="{{ old('norekening') }}" required autocomplete="name" autofocus>
+
+                                @error('norekening')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                             <div class="mt-3">
                                 <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN UP</button>
                             </div>
