@@ -30,7 +30,7 @@
                                         <td value="{{ $pyt->id }}">{{ $pyt->norekening }}</td>
                                         <td value="{{ $pyt->id }}">{{ $pyt->title }}</td>
                                         <td>{{ $pyt->money }}</td>
-                                        <td>{{$pyt->created_at}}</td>
+                                        <td>{{$pyt->created_at->format('d M Y')}}</td>
                                        
                                         
                                        

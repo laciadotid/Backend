@@ -38,7 +38,7 @@
                                         <td>
                                             <img src="{{ asset('fotoberita/'.$brt1->featuredImage) }}" alt="">
                                         </td>
-                                        <td>{{ $brt1->created_at}}</td>
+                                        <td>{{ $brt1->created_at->format('d M Y')}}</td>
                                  
                                     </tr>
                                 @endforeach
@@ -81,7 +81,7 @@
                                         <td>
                                             <img src="{{ asset('fotoberita/'.$brt->featuredImage) }}" alt="">
                                         </td>
-                                        <td>{{ $brt->created_at}}</td>
+                                        <td>{{ $brt->created_at->format('d M Y')}}</td>
                                         <td>
                                             <a href="{{ route('daftarberita.pembayaran', $brt->id) }}">Pembayaran</a> |
 

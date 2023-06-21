@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Payment;
 use App\Models\Post;
 // use Illuminate\Http\Request;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Validator;
 use Auth;
 
 class DaftarBeritaController extends Controller
 {
+    protected $dates=['created_at'];
     /**
      * Display a listing of the resource.
      *
@@ -20,6 +22,8 @@ class DaftarBeritaController extends Controller
     {
         $daftarberitaview = Post::all();
         $daftarberita = Post::where('status', 0)->get();
+
+
         return view('daftarberita.index', compact('daftarberita','daftarberitaview'));
     }
 

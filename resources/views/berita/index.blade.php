@@ -33,7 +33,7 @@
                                         <td>
                                             <img src="{{ asset('fotoberita/'.$brt->featuredImage) }}" alt="">
                                         </td>
-                                        <td>{{ $brt->created_at}}</td>
+                                        <td>{{ $brt->created_at->format('d M Y')}}</td>
                                         <td>
                                             <a href="{{ route('berita.edit', $brt->id) }}">Edit</a> |
 

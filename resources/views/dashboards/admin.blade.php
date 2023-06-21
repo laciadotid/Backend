@@ -16,7 +16,7 @@
         <div class="col-md-7 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <p class="card-title mb-0">Postingan Postingan Terbaru</p>
+                    <p class="card-title mb-0">Postingan Terbaru</p>
                     <div class="table-responsive">
                          <table class="table table-striped table-borderless">
                             <thead>

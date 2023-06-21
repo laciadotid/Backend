@@ -7,13 +7,14 @@ use Auth;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Payment;
-
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 
 class BeritaController extends Controller
 {
+    protected $dates=['created_at'];
     /**
      * Display a listing of the resource.
      *
