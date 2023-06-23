@@ -18,6 +18,7 @@
                                     <th>gambar struk</th>
                                     <th>saldo</th>
                                     <th>date</th>
+                                    <th>action</th>
                                     
                                 </tr>
                             </thead>
@@ -32,7 +33,7 @@
                                         <td>{{ $pyt->money }}</td>
                                         <td>{{$pyt->created_at->format('d M Y')}}</td>
                                        
-                                        
+                                        <td> <a href="{{ route('history.detailhistorycustomer', $pyt->id) }}">Detail</a></td>
                                        
                                     </tr>
                                 @endforeach

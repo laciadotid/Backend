@@ -38,11 +38,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('daftarberita/{id}/pembayaran', [DaftarBeritaController::class, 'pembayaran'])->name('daftarberita.pembayaran');
     Route::put('daftarberita/{id}', [DaftarBeritaController::class, 'bayar'])->name('daftarberita.bayar');
     Route::get('admin/history', [BeritaController::class, 'historyadmin'])->name('history.historyadmin');
-    // Route::resource('berita', BeritaController::class);
-
-    // Route::get('services/createkategori', [ServiceController::class,'createkategori'])->name('services.createkategori');
-    // Route::get('reservations', [ReservationController::class, 'index'])->name('reservations.index');
-    // Route::get('reservations/updateStatus/{id}/{status}', [ReservationController::class, 'updateStatus'])->name('reservations.status');
+    Route::get('history/{id}/detailhistorypembayaran', [BeritaController::class, 'detailhistoryadmin'])->name('history.detailhistoryadmin');
 });
 
 Route::middleware(['auth', 'penulis'])->group(function () {
@@ -53,12 +49,6 @@ Route::middleware(['auth', 'penulis'])->group(function () {
     Route::get('berita/{id}/edit', [BeritaController::class, 'edit'])->name('berita.edit');
     Route::put('berita/{id}', [BeritaController::class, 'update'])->name('berita.update');
     Route::get('history/history', [BeritaController::class, 'history'])->name('history.history');
-    // Route::delete('berita/{id}', [BeritaController::class, 'destroy'])->name('berita.destroy');
-    // Route::delete('/berita/{id}', 'BeritaController@destroy')->name('berita.destroy');
-
-
-    // Route::get('reservations/history', [ReservationController::class, 'history'])->name('reservations.history');
-    // Route::get('reservations/{id}/edit', [ReservationController::class, 'edit'])->name('reservations.edit');
-    // Route::put('reservations/{id}', [ReservationController::class, 'update'])->name('reservations.update');
-    // Route::delete('reservations/{id}', [ReservationController::class, 'destroy'])->name('reservations.destroy');
+    Route::get('history/{id}/detailhistorycustomer', [BeritaController::class, 'detailhistorycustomer'])->name('history.detailhistorycustomer');
+    
 });

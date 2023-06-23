@@ -177,10 +177,37 @@ class BeritaController extends Controller
 
         $historyadmin = Payment::join('post', 'payment.payment_post', '=', 'post.id')
         ->join('users', 'post.post_author', '=', 'users.id')
-        ->select('users.*','post.*','payment.*')
-        ->get();
+        ->select('users.*','post.*','payment.*')->get();
 
         return view('history.historyadmin', compact('historyadmin'));
+        // return view('berita.create');
+    }
+
+    public function detailhistoryadmin($id)
+    {
+        // $history = Payment::all();
+
+        // $pembayaran = Pa::find($id);
+        $detailhistoryadmin = Payment::join('post', 'payment.payment_post', '=', 'post.id')
+        ->join('users', 'post.post_author', '=', 'users.id')
+        ->select('users.*','post.*','payment.*')
+        ->where('payment.id','=',$id)->get();
+
+        return view('history.detailhistoryadmin', compact('detailhistoryadmin'));
+        // return view('berita.create');
+    }
+
+    public function detailhistorycustomer($id)
+    {
+        // $history = Payment::all();
+
+        // $pembayaran = Pa::find($id);
+        $detailhistorycustomer = Payment::join('post', 'payment.payment_post', '=', 'post.id')
+        ->join('users', 'post.post_author', '=', 'users.id')
+        ->select('users.*','post.*','payment.*')
+        ->where('payment.id','=',$id)->get();
+
+        return view('history.detailhistorycustomer', compact('detailhistorycustomer'));
         // return view('berita.create');
     }
 }

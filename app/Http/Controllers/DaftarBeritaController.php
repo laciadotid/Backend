@@ -79,6 +79,9 @@ class DaftarBeritaController extends Controller
         return redirect()->route('daftarberita.index');
     }
 
+
+   
+
     /**
      * Show the form for creating a new resource.
      *
