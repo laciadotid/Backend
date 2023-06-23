@@ -17,6 +17,7 @@
                                     <th>penulis</th>
                                     <th>no rekening</th>
                                     <th>postingan</th>
+                                    <th>gambar struk</th>
                                     <th>saldo</th>
                                     <th>date</th>
                                     
@@ -29,6 +30,9 @@
                                         <td value="{{ $pyt->id }}">{{ $pyt->name }}</td>
                                         <td value="{{ $pyt->id }}">{{ $pyt->norekening }}</td>
                                         <td value="{{ $pyt->id }}">{{ $pyt->title }}</td>
+                                        <td>
+                                            <img src="{{ asset('fotostruk/'.$pyt->featuredImage) }}" alt="">
+                                        </td>
                                         <td>{{ $pyt->money }}</td>
                                         <td>{{$pyt->created_at->format('d M Y')}}</td>
                                        

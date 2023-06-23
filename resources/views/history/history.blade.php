@@ -15,6 +15,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>postingan</th>
+                                    <th>gambar struk</th>
                                     <th>saldo</th>
                                     <th>date</th>
                                     
@@ -25,6 +26,9 @@
                                     <tr>
                                         <td>{{ ++$key }}</td>
                                         <td value="{{ $pyt->id }}">{{ $pyt->title }}</td>
+                                        <td>
+                                            <img src="{{ asset('fotostruk/'.$pyt->featuredImage) }}" alt="">
+                                        </td>
                                         <td>{{ $pyt->money }}</td>
                                         <td>{{$pyt->created_at->format('d M Y')}}</td>
                                        

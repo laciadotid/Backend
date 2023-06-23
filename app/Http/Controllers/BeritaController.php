@@ -161,7 +161,10 @@ class BeritaController extends Controller
     {
         // $history = Payment::all();
 
-        $history = Payment::join('post', 'payment.payment_post', '=', 'post.id')->where('post.post_author', Auth::user()->id)->get();
+        $history = Payment::join('post', 'payment.payment_post', '=', 'post.id')
+        ->select('post.*','payment.*')
+        ->where('post.post_author', Auth::user()->id)->get()
+        ;
 
         return view('history.history', compact('history'));
         // return view('berita.create');

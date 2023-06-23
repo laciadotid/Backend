@@ -10,6 +10,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Validator;
 use Auth;
 
+
 class DaftarBeritaController extends Controller
 {
     protected $dates=['created_at'];
@@ -40,17 +41,30 @@ class DaftarBeritaController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'money' => 'required|numeric|min:0',
+            'featuredImage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'payment_post' => 'required|integer|between:0,18446744073709551615',
             'payment_admin' => 'required|integer|between:0,18446744073709551615',
         ]);
 
+       
+
         $pembayaran = new Payment();
 
         $pembayaran->money = $request->money;
+
         $pembayaran->payment_post = $request->payment_post;
         $pembayaran->payment_admin = Auth::user()->id;
-        $pembayaran->save();
 
+        $pembayaran['featuredImage'] = $request->hasFile('featuredImage');
+        if ($request->hasFile('featuredImage')) {
+            $image = $request->file('featuredImage');
+            $imageName = $image->getClientOriginalName();
+            $image->move(public_path('fotostruk'), $imageName);
+            $pembayaran->featuredImage = $imageName;
+        }
+
+        $pembayaran->save();   
+    
         if($pembayaran->save()){
             $post = Post::find($id); // Replace $id with the appropriate ID of the associated post
 
@@ -60,6 +74,7 @@ class DaftarBeritaController extends Controller
             }
         
         }
+        
 
         return redirect()->route('daftarberita.index');
     }

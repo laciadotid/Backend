@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Pembayaran</h4>
-                    <form class="forms-sample" action="{{ route('daftarberita.bayar', $pembayaran->id) }}" method="POST">
+                    <form class="forms-sample" action="{{ route('daftarberita.bayar', $pembayaran->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
@@ -24,6 +24,12 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">pembayaran</label>
                             <input type="number" class="form-control" id="exampleInputUsername1" name="money" placeholder="pembayaran" >
+                        </div>
+
+                       
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">Featured Image</label>
+                            <input type="file" class="form-control" id="exampleInputUsername1" name="featuredImage" placeholder="Featured Image">
                         </div>
 
                           {{-- post_category --}}
