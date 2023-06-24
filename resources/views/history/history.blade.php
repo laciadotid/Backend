@@ -7,18 +7,18 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">History Saldo</h4>
+                    <h4 class="card-title">History Penghasilan</h4>
                    
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>postingan</th>
+                                    <th>Judul Postingan</th>
                                     <th>gambar struk</th>
-                                    <th>saldo</th>
-                                    <th>date</th>
-                                    <th>action</th>
+                                    <th>Uang Penghasilan</th>
+                                    <th>Tanggal</th>
+                                    <th>Action</th>
                                     
                                 </tr>
                             </thead>

@@ -16,10 +16,10 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>title</th>
-                                    <th>slug</th>
-                                    <th>featuredImage</th>
-                                    <th>Date</th>
+                                    <th>Judul Postingan</th>
+                                    <th>Link</th>
+                                    <th>Gambar Postingan</th>
+                                    <th>Tanggal</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

@@ -12,38 +12,38 @@
 
                         {{-- title --}}
                         <div class="form-group">
-                            <label for="exampleInputUsername1">Title</label>
+                            <label for="exampleInputUsername1">Judul Postingan</label>
                             <input type="text" class="form-control" id="exampleInputUsername1" name="title" placeholder="Title">
                         </div>
 
                         {{-- slug --}}
                         {{-- <div class="form-group">
-                            <label for="exampleInputUsername1">slug</label>
+                            <label for="exampleInputUsername1">Link</label>
                             <input type="text" class="form-control" id="exampleInputUsername1" name="slug" placeholder="Nama pelayanan">
                         </div> --}}
 
                         {{-- metadescription --}}
                         <div class="form-group">
-                            <label for="exampleInputUsername1">Meta Description</label>
+                            <label for="exampleInputUsername1">Deskripsi Singkat Postingan</label>
                             <textarea  class="form-control" id="exampleInputUsername1" rows="4" name="metaDescription" placeholder="Meta Description"> </textarea>
                         </div>
 
                         {{-- featureimage --}}
                         <div class="form-group">
-                            <label for="exampleInputUsername1">Featured Image</label>
+                            <label for="exampleInputUsername1">Gambar Postingan</label>
                             <input type="file" class="form-control" id="exampleInputUsername1" name="featuredImage" placeholder="Featured Image">
                         </div>
 
                         {{-- date --}}
                         <div class="form-group">
-                            <label for="exampleInputUsername1">Date</label>
+                            <label for="exampleInputUsername1">Tanggal</label>
                             <input type="date" class="form-control" id="exampleInputUsername1" name="date" placeholder="Date">
                         </div>
 
 
                           {{-- post_category --}}
                           <div class="form-group">
-                            <label for="exampleInputUsername1">category</label>
+                            <label for="exampleInputUsername1">Kategori</label>
                             <select class="form-control js-example-basic-single" id="category" name="post_category" style="height: 50px !important">
                                 <option selected disabled>pilih category</option>
                                 @foreach($category as $cty)
@@ -54,7 +54,7 @@
 
                         {{-- content --}}
                         <div class="form-group">
-                            <label for="exampleInputUsername1">description content</label>
+                            <label for="exampleInputUsername1">Deskripsi Panjang Postingan</label>
                             <textarea class="form-control" id="exampleInputUsername1" rows="8" name="content" placeholder="description content"> </textarea>
                         </div>
 

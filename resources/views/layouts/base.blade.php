@@ -19,7 +19,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ asset('assets/css/vertical-layout-light/style.css') }}">
     <!-- endinject -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/sekai_title.png') }}" />
     <!-- Custom css -->
     @stack('style')
     <!-- End custom css -->

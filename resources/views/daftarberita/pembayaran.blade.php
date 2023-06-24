@@ -11,24 +11,21 @@
                         @csrf
                         @method('PUT')
                         <div class="form-group">
-                            <label for="exampleInputUsername1">title</label>
+                            <label for="exampleInputUsername1">Judul Postingan</label>
                             <input type="text" class="form-control" id="exampleInputUsername1" name="name" placeholder="Nama pelayanan" value="{{ $pembayaran->title }}">
                         </div>
 
-                        {{-- <div class="form-group">
-                            <label for="exampleInputEmail1">Harga</label>
-                            <input type="number" class="form-control" id="exampleInputEmail1" name="price" placeholder="Harga" value="{{ $service->price }}">
-                        </div> --}}
+                     
 
 
                         <div class="form-group">
-                            <label for="exampleInputEmail1">pembayaran</label>
+                            <label for="exampleInputEmail1">pembayaran saldo</label>
                             <input type="number" class="form-control" id="exampleInputUsername1" name="money" placeholder="pembayaran" >
                         </div>
 
                        
                         <div class="form-group">
-                            <label for="exampleInputUsername1">Featured Image</label>
+                            <label for="exampleInputUsername1">Gambar Struk</label>
                             <input type="file" class="form-control" id="exampleInputUsername1" name="featuredImage" placeholder="Featured Image">
                         </div>
 

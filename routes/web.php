@@ -26,7 +26,7 @@ Route::get('/', function () {
 //page react button
 
 
-//page laravel?
+#page laravel
 
 
 Auth::routes();

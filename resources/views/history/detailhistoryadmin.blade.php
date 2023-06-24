@@ -26,16 +26,16 @@
             
            
             <div class="form-group">
-                <label for="exampleInputUsername1">title</label>
+                <label for="exampleInputUsername1">Judul Postingan</label>
                 <input type="text" class="form-control" id="exampleInputUsername1"  value="{{ $dha->title }}" readonly>
             </div>
            
-            <label>Foto Struk</label>
+            <label>Gambar Struk</label>
             <img width="50%" height="50%" src="{{ asset('fotostruk/'.$dha->featuredImage) }}" alt="">
             <br>
             
             <div class="form-group">
-                <label for="exampleInputUsername1">Money</label>
+                <label for="exampleInputUsername1">Uang Penghasilan</label>
                 <input type="text" class="form-control" id="exampleInputUsername1"  value="{{ $dha->money }}" readonly>
             </div>
             

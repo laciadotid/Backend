@@ -10,7 +10,7 @@
             </li>
             <li class="nav-item {{ (request()->segment(1) == 'kategori') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('kategori.index') }}">
-                    <i class="ti-heart menu-icon"></i>
+                    <i class="ti-view-list-alt menu-icon"></i>
                     <span class="menu-title">kategori</span>
                 </a>
             </li>
@@ -22,8 +22,8 @@
             </li>
             <li class="nav-item {{ (request()->segment(3) == 'index') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('history.historyadmin') }}">
-                    <i class="icon-book menu-icon"></i>
-                    <span class="menu-title">History Payment</span>
+                    <i class="ti-receipt menu-icon"></i>
+                    <span class="menu-title">History Pembayaran</span>
                 </a>
             </li>
 
@@ -46,7 +46,7 @@
              <li class="nav-item {{ (request()->segment(3) == 'history') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('history.history') }}">
                     <i class="ti-clipboard menu-icon"></i>
-                    <span class="menu-title">Riwayat Saldo</span>
+                    <span class="menu-title">Riwayat Penghasilan</span>
                 </a>
             </li> 
         </ul>
